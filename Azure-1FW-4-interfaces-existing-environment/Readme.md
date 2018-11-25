@@ -56,6 +56,7 @@ After deployment, this firewall can be integrated into Azure load balancer backe
 
 PAN:
 https://aras-vmfw1.eastus.cloudapp.azure.com/
+refarchadmin
 https://aras-vmfw2.eastus.cloudapp.azure.com/
 
 WEB:
