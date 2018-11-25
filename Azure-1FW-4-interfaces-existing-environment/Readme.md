@@ -53,3 +53,60 @@ The following VMs are supported:
 NOTE: Make sure the VMs are supported in the specific Storage Account Type and Azure Region.
 
 After deployment, this firewall can be integrated into Azure load balancer backend pools using the Azure Resource Manager Portal.
+
+PAN:
+https://aras-vmfw1.eastus.cloudapp.azure.com/
+https://aras-vmfw2.eastus.cloudapp.azure.com/
+
+WEB:
+aras-public-shared-web.eastus.cloudapp.azure.com
+
+TESTING 
+OUTBOUND:
+ResourceGroupName="AzureRefArch"
+
+AdminPassword=''
+VnetName="AzureRefArch-VNET"
+SubnetName="Shared-Business"
+SshKey=''
+
+az vm create \
+    --resource-group $ResourceGroupName \
+    --name $VmName \
+    --image UbuntuLTS \
+    --admin-username azureuser \
+    --authentication-type password \
+    --admin-password $AdminPassword \
+    --size Standard_B1s \
+    --use-unmanaged-disk \
+    --storage-sku Standard_LRS \
+    --public-ip-address "" \
+    --vnet-name $VnetName --subnet $SubnetName
+
+az vm open-port --port 22 --resource-group $ResourceGroupName --name $VmName
+
+VmName="jumpserver"
+SubnetName="Jump"
+
+az network nic create \
+    --resource-group $ResourceGroupName \
+    --name jumpNicPrivate \
+    --vnet-name $VnetName \
+    --subnet $SubnetName \
+
+az network nic create \
+    --resource-group $ResourceGroupName \
+    --name jumpNicPublic \
+    --vnet-name $VnetName \
+    --subnet $SubnetName \  
+
+az vm create \
+    --resource-group $ResourceGroupName \
+    --name jumpserver \
+    --size Standard_B1s \
+    --image UbuntuLTS \
+    --admin-username azureuser \
+    --vnet $VnetName --subnet $SubnetName \
+    --nics jumpNicPrivate, jumpNicPublic
+    --public-ip-address-dns-name $VmName \
+    --ssh-key-value $sSshKey
