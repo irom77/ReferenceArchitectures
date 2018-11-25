@@ -38,7 +38,8 @@
           "Standard_D4_v2",
           "Standard_A4",
           "Standard_DS3_v2",
-          "Standard_DS4_v2"
+          "Standard_DS4_v2",
+          "Standard_D8s_v3"
        ],
        "metadata": {
           "description": "Azure VM size for VM-Series"
