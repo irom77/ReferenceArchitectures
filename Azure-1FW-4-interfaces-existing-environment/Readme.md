@@ -67,12 +67,11 @@ aras-public-shared-web.eastus.cloudapp.azure.com
 ### TESTING 
 ##### OUTBOUND:
 
-ResourceGroupName="AzureRefArch"
-
-AdminPassword=''
-VnetName="AzureRefArch-VNET"
-SubnetName="Shared-Business"
-SshKey=''
+-ResourceGroupName="AzureRefArch"
+-AdminPassword=''
+-VnetName="AzureRefArch-VNET"
+-SubnetName="Shared-Business"
+-SshKey=''
 ```
 az vm create \
     --resource-group $ResourceGroupName \
