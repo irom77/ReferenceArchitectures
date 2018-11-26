@@ -23,7 +23,7 @@ This template was created to support the deployment of a 4 interface Palo Alto N
                       - Public IP address (Standard SKU) for the firewall management interface
                     
             
-FEATURES:
+### FEATURES:
 - The firewall deploys with (4) interfaces
   - (1) management interface 
   - (3) dataplane interfaces
@@ -65,7 +65,7 @@ After deployment, this firewall can be integrated into Azure load balancer backe
 aras-public-shared-web.eastus.cloudapp.azure.com
 
 ### TESTING 
-#### OUTBOUND:
+##### OUTBOUND:
 
 ResourceGroupName="AzureRefArch"
 
