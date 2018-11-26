@@ -65,6 +65,12 @@ After deployment, this firewall can be integrated into Azure load balancer backe
 aras-public-shared-web.eastus.cloudapp.azure.com
 
 ### TESTING 
+
+- jumpserver: docker@R90HE73F:~$ ssh -i .ssh/id_rsa azureuser@x.x.x.x
+- netadmin1a: ssh azureuser@10.5.2.4
+- webserver1: ssh azureuser@10.5.0.4
+
+
 ##### OUTBOUND:
 
 - ResourceGroupName="AzureRefArch"
