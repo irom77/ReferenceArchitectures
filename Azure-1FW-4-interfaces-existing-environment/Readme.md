@@ -42,6 +42,7 @@ The following Storage Account types are supported:
                     
 The following VMs are supported:
 
+                    -Standard_D8s_v3 (my preferred)
                     -Standard_D3
                     -Standard_D4
                     -Standard_D3_v2 (used in deployment guide)
