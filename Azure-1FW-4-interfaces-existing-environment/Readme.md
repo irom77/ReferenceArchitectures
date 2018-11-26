@@ -57,22 +57,24 @@ After deployment, this firewall can be integrated into Azure load balancer backe
 
 ###PAN:
 
-https://aras-vmfw1.eastus.cloudapp.azure.com/
+- https://aras-vmfw1.eastus.cloudapp.azure.com/
 refarchadmin
-https://aras-vmfw2.eastus.cloudapp.azure.com/
+- https://aras-vmfw2.eastus.cloudapp.azure.com/
 
 ###WEB:
+
 aras-public-shared-web.eastus.cloudapp.azure.com
 
 ###TESTING 
 ####OUTBOUND:
+
 ResourceGroupName="AzureRefArch"
 
 AdminPassword=''
 VnetName="AzureRefArch-VNET"
 SubnetName="Shared-Business"
 SshKey=''
-
+```
 az vm create \
     --resource-group $ResourceGroupName \
     --name $VmName \
@@ -113,3 +115,4 @@ az vm create \
     --nics jumpNicPrivate, jumpNicPublic
     --public-ip-address-dns-name $VmName \
     --ssh-key-value $sSshKey
+```
