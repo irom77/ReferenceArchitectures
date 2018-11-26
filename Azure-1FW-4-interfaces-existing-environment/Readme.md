@@ -54,16 +54,17 @@ NOTE: Make sure the VMs are supported in the specific Storage Account Type and A
 
 After deployment, this firewall can be integrated into Azure load balancer backend pools using the Azure Resource Manager Portal.
 
-PAN:
+###PAN:
+
 https://aras-vmfw1.eastus.cloudapp.azure.com/
 refarchadmin
 https://aras-vmfw2.eastus.cloudapp.azure.com/
 
-WEB:
+###WEB:
 aras-public-shared-web.eastus.cloudapp.azure.com
 
-TESTING 
-OUTBOUND:
+###TESTING 
+####OUTBOUND:
 ResourceGroupName="AzureRefArch"
 
 AdminPassword=''
