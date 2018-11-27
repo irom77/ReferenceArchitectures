@@ -120,3 +120,12 @@ az vm create \
     --public-ip-address-dns-name $VmName \
     --ssh-key-value $sSshKey
 ```
+
+##### INBOUND: 
+
+```
+azureuser@webserver1:~$ sudo python3 -m http.server --bind 0.0.0.0 80
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+10.5.0.6 - - [26/Nov/2018 19:26:53] "GET / HTTP/1.1" 200 -
+10.5.0.7 - - [26/Nov/2018 19:26:54] code 404, message File not found
+```

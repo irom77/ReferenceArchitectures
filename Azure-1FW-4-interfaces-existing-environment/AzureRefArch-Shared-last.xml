@@ -2,6 +2,14 @@
 <config version="8.1.0" urldb="paloaltonetworks">
   <mgt-config>
     <users>
+      <entry name="admin">
+        <phash>*</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+      </entry>
       <entry name="refarchadmin">
         <phash>$1$rbilgnmp$E28a3VscaNndk7qR/I21g0</phash>
         <permissions>
@@ -840,20 +848,6 @@
                 </entry>
               </rules>
             </security>
-            <default-security-rules>
-              <rules>
-                <entry name="intrazone-default">
-                  <action>allow</action>
-                  <log-start>no</log-start>
-                  <log-end>yes</log-end>
-                </entry>
-                <entry name="interzone-default">
-                  <action>deny</action>
-                  <log-start>no</log-start>
-                  <log-end>yes</log-end>
-                </entry>
-              </rules>
-            </default-security-rules>
           </rulebase>
           <import>
             <network>
@@ -866,11 +860,10 @@
           </import>
           <address>
             <entry name="Host-Shared-Public-Web">
-              <ip-netmask>20.185.107.112</ip-netmask>
-              <description>aras-public-shared-web.eastus.cloudapp.azure.com</description>
+              <fqdn>aras-public-shared-web.eastus.cloudapp.azure.com</fqdn>
             </entry>
             <entry name="Host-Shared-PrivateWeb-ILB">
-              <ip-netmask>10.5.0.4</ip-netmask>
+              <ip-netmask>10.5.0.20</ip-netmask>
             </entry>
             <entry name="Net-10.5.1.0">
               <ip-netmask>10.5.1.0/24</ip-netmask>
