@@ -8,7 +8,11 @@ This template deploys a (4) interface Palo Alto Networks VM-Series firewall as s
   <img src="./Azure-1FW-4-interfaces.png" width="350" title="hover text">
 </p>
 
+Shared Design model
 
+<p align="center">
+  <img src="./arch-ref.png" width="350" title="hover text">
+</p>
 
 This template was created to support the deployment of a 4 interface Palo Alto Networks firewall into an existing Microsoft Azure environment that has the following items already deployed:
 
