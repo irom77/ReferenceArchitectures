@@ -659,7 +659,7 @@
               </recurring>
             </threats>
           </update-schedule>
-          <timezone>US/Pacific</timezone>
+          <timezone>America/New_York</timezone>
           <service>
             <disable-telnet>yes</disable-telnet>
             <disable-http>yes</disable-http>
@@ -774,6 +774,68 @@
             </nat>
             <security>
               <rules>
+                <entry name="Testing Failover">
+                  <to>
+                    <member>any</member>
+                  </to>
+                  <from>
+                    <member>Private</member>
+                  </from>
+                  <source>
+                    <member>hp</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <source-user>
+                    <member>any</member>
+                  </source-user>
+                  <category>
+                    <member>any</member>
+                  </category>
+                  <application>
+                    <member>any</member>
+                  </application>
+                  <service>
+                    <member>any</member>
+                  </service>
+                  <hip-profiles>
+                    <member>any</member>
+                  </hip-profiles>
+                  <action>deny</action>
+                  <disabled>yes</disabled>
+                </entry>
+                <entry name="Blackhole logging">
+                  <to>
+                    <member>any</member>
+                  </to>
+                  <from>
+                    <member>any</member>
+                  </from>
+                  <source>
+                    <member>hp</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <source-user>
+                    <member>any</member>
+                  </source-user>
+                  <category>
+                    <member>any</member>
+                  </category>
+                  <application>
+                    <member>any</member>
+                  </application>
+                  <service>
+                    <member>any</member>
+                  </service>
+                  <hip-profiles>
+                    <member>any</member>
+                  </hip-profiles>
+                  <action>allow</action>
+                  <log-end>no</log-end>
+                </entry>
                 <entry name="Inbound-Shared-Web">
                   <to>
                     <member>Private</member>
@@ -830,7 +892,11 @@
                   <application>
                     <member>apt-get</member>
                     <member>google-base</member>
+                    <member>icmp</member>
+                    <member>ntp</member>
+                    <member>ping</member>
                     <member>ssl</member>
+                    <member>traceroute</member>
                     <member>web-browsing</member>
                   </application>
                   <service>
@@ -893,6 +959,10 @@
             <entry name="Net-10.5.0.0">
               <ip-netmask>10.5.0.0/24</ip-netmask>
               <description>DB subnet</description>
+            </entry>
+            <entry name="hp">
+              <ip-netmask>168.63.129.16</ip-netmask>
+              <description>Health probes</description>
             </entry>
           </address>
         </entry>
