@@ -760,7 +760,6 @@
                     <member>Private</member>
                   </from>
                   <source>
-                    <member>Net-10.5.0.0</member>
                     <member>Net-10.5.1.0</member>
                     <member>Net-10.5.2.0</member>
                     <member>Net-10.5.3.0</member>
@@ -813,7 +812,6 @@
                     <member>Private</member>
                   </from>
                   <source>
-                    <member>Net-10.5.0.0</member>
                     <member>Net-10.5.1.0</member>
                     <member>Net-10.5.2.0</member>
                     <member>Net-10.5.3.0</member>
@@ -828,7 +826,6 @@
                     <member>any</member>
                   </category>
                   <application>
-                    <member>apt-get</member>
                     <member>google-base</member>
                     <member>ssl</member>
                     <member>web-browsing</member>
@@ -885,13 +882,6 @@
             </entry>
             <entry name="Net-10.5.3.0">
               <ip-netmask>10.5.3.0/24</ip-netmask>
-              <description>DB subnet</description>
-            </entry>
-            <entry name="webserver1">
-              <ip-netmask>10.5.0.4</ip-netmask>
-            </entry>
-            <entry name="Net-10.5.0.0">
-              <ip-netmask>10.5.0.0/24</ip-netmask>
               <description>DB subnet</description>
             </entry>
           </address>
