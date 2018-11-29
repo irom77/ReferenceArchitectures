@@ -55,7 +55,7 @@ NOTE: Make sure the VMs are supported in the specific Storage Account Type and A
 
 After deployment, this firewall can be integrated into Azure load balancer backend pools using the Azure Resource Manager Portal.
 
-Shared Design model
+## Shared Design model
 
 <p align="center">
   <img src="./arch-ref.png" width="350" title="hover text">
