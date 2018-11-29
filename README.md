@@ -1,10 +1,8 @@
 # Palo Alto Networks Reference Architectures
 
-## Shared Design model
 
-<p align="center">
-  <img src="./Azure-1FW-4-interfaces-existing-environment/arch-ref.png" width="350" title="hover text">
-</p>
+
+
 
 
 Reference architectures apply a platform-centric approach to secure designs for key customer environments, including SaaS, cloud, and data center. Based on validated configurations and best practices, they provide technical and design guidance in support of technical customer engagements.
@@ -14,6 +12,11 @@ Reference architectures apply a platform-centric approach to secure designs for 
  The proper use of each template is described in the deployment guides:
  - **Deployment Guide For Microsoft Azure - Scaled Design Model**
  - **Deployment Guide For Microsoft Azure - Shared Design Model**
+
+### Shared Design model
+ <p align="center">
+  <img src="./Azure-1FW-4-interfaces-existing-environment/arch-ref.png" width="350" title="hover text">
+</p>
  
  ### Azure-1FW-3-interfaces-existing-environment-BS
  This template is used for Inbound firewalls in the Scaled Design Model with automated bootstrapping.
