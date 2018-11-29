@@ -64,6 +64,14 @@ After deployment, this firewall can be integrated into Azure load balancer backe
 
 aras-public-shared-web.eastus.cloudapp.azure.com
 
+```
+sudo apt update
+sudo apt install apache2
+sudo ufw allow 'Apache'
+sudo ufw status
+sudo systemctl status apache2
+```
+
 ### TESTING 
 
 - jumpserver: docker@R90HE73F:~$ ssh -i .ssh/id_rsa azureuser@x.x.x.x
