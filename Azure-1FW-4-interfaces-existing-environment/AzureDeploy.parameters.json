@@ -15,13 +15,7 @@
         "description": "Name of the existing storage account used to store the VM's disks"
       }
     },
-    "storageAccountExistingRG": {
-       "type": "string",
-       "defaultValue" : "",
-       "metadata": {
-          "description": "Storage Account's Resource Group location."
-       }
-    },
+
     "fwAvSet": {
        "type": "string",
        "metadata": {
@@ -60,13 +54,6 @@
         "description": "Virtual network address CIDR"
       }
     },
-    "virtualNetworkExistingRGName": {
-      "type": "string",
-      "defaultValue": "",
-      "metadata": {
-        "description": "Name of resource group of existing VNET (if applicable)"
-      }
-    },
     "subnet0Name": {
       "type": "string",
       "defaultValue": "Management",
@@ -86,41 +73,6 @@
       "defaultValue": "Private",
       "metadata": {
         "description": "Private Subnet"
-      }
-    },
-    "subnet3Name": {
-      "type": "string",
-      "defaultValue": "VPN",
-      "metadata": {
-        "description": "VPN Subnet for backhaul"
-      }
-    },
-    "subnet0Prefix": {
-      "type": "string",
-      "defaultValue": "192.168.1.0/24",
-      "metadata": {
-        "description": "Management subnet CIDR"
-      }
-    },
-    "subnet1Prefix": {
-      "type": "string",
-      "defaultValue": "172.16.1.0/24",
-      "metadata": {
-        "description": "Public subnet CIDR"
-      }
-    },
-    "subnet2Prefix": {
-      "type": "string",
-      "defaultValue": "10.5.0.0/24",
-      "metadata": {
-        "description": "Private subnet CIDR"
-      }
-    },
-    "subnet3Prefix": {
-      "type": "string",
-      "defaultValue": "10.5.15.0/24",
-      "metadata": {
-        "description": "VPN subnet CIDR"
       }
     },
     "subnet0StartAddress": {
@@ -166,6 +118,7 @@
     },
     "publicIPAddressName": {
       "type": "string",
+      "defaultValue": "ARA-VMFW1",
       "metadata": {
         "description": "Name of ARA-VMFW1 Management Public Address"
       }
@@ -181,14 +134,6 @@
       "metadata": {
         "description": "Firewall License Model"
       }
-    },
-    "nsgName": {
-      "type": "string",
-      "defaultValue": "DefaultNSG",
-      "metadata": {
-        "description": "Name of existing Network Security Group for Management interface"
-      }
-    }
-        
+    }   
   }
 }  

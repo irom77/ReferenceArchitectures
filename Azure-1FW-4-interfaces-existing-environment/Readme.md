@@ -61,6 +61,19 @@ After deployment, this firewall can be integrated into Azure load balancer backe
   <img src="./arch-ref.png" width="350" title="hover text">
 </p>
 
+### Deployemnt
+rg="panlab-ref"
+dn="panlab-ref-deployment"
+
+az group create --name $rg  --location "East US"
+az group deployment create \
+  --name $dn \
+  --resource-group $rg \
+  --template-file AzureDeploy.json \
+  --parameters @AzureDeploy.parameters.json
+
+
+
 ### PAN:
 
 - https://aras-vmfw1.eastus.cloudapp.azure.com/ (refarchadmin)

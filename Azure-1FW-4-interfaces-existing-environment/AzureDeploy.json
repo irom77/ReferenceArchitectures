@@ -82,13 +82,6 @@
       },
       "defaultValue": "AzureRefArch-VNET"
     },
-    "virtualNetworkExistingRGName": {
-      "type": "string",
-      "defaultValue": "",
-      "metadata": {
-        "description": "Name of resource group of EXISTING VNET"
-      }
-    },
     "subnet0Name": {
       "type": "string",
       "defaultValue": "Management",
@@ -167,11 +160,12 @@
     }
   },
   "variables": {
+    "resourceGroup":"[resourceGroup().name]",
     "apiVersion": "2015-06-15",
     "imagePublisher": "paloaltonetworks",
     "imageOffer" : "vmseries1",
     "nicName": "[concat(parameters('vmName'), '-eth')]",
-    "vnetID": "[resourceId(parameters('virtualNetworkExistingRGName'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]",
+    "vnetID": "[resourceId(variables('resourceGroup'),concat('Microsoft.Network','/','virtualNetworks'),parameters('virtualNetworkName'))]",
     "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
     "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]",
     "subnet2Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet2Name'))]",
