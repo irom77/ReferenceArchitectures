@@ -8,11 +8,7 @@ This template deploys a (4) interface Palo Alto Networks VM-Series firewall as s
   <img src="./Azure-1FW-4-interfaces.png" width="350" title="hover text">
 </p>
 
-Shared Design model
 
-<p align="center">
-  <img src="./arch-ref.png" width="350" title="hover text">
-</p>
 
 This template was created to support the deployment of a 4 interface Palo Alto Networks firewall into an existing Microsoft Azure environment that has the following items already deployed:
 
@@ -58,6 +54,12 @@ The following VMs are supported:
 NOTE: Make sure the VMs are supported in the specific Storage Account Type and Azure Region.
 
 After deployment, this firewall can be integrated into Azure load balancer backend pools using the Azure Resource Manager Portal.
+
+Shared Design model
+
+<p align="center">
+  <img src="./arch-ref.png" width="350" title="hover text">
+</p>
 
 ### PAN:
 
